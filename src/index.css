@@ -19,3 +19,16 @@ code {
 .main {
   border: solid;
 }
+
+.folder-list{
+  float: left;
+  list-style: none;
+}
+.folder-item {
+  border: solid;
+}
+
+.note-list {
+  float: right;
+  list-style: none;
+}

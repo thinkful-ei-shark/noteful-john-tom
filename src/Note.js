@@ -1,19 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 
-class Note extends React.Component {
+function Note(props) {
 
-    render() {
-        return (
-            <div>
-                <h3>Note1</h3>
-                <p>Date Modified</p>
-                <button type='button'>Delete Note</button>
-            </div>
-        )
-    }
+    return (
+        <li className='note-list-item'>
+            <h3>
+                <Link to={`/note/${props.id}`}>{props.name}</Link>
+            </h3>
+            <p>Date Modified</p>
+            <button type='button'>Delete Note</button>
+        </li>
+    )
 }
+
 
 
 
