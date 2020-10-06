@@ -8,17 +8,20 @@ import dummyStore from './dummy-store.js'
 class App extends React.Component {
 
   state = {
-    notes: [1, 2],
+    notes: [],
     folders: []
   }
 
+  componentDidMount() {
+    // fake date loading from API call
+    setTimeout(() => this.setState(dummyStore), 600);
+  }
   // renderNoteRoute() {
 
   // }
 
   renderMainRoute() {
-    const { notes, folders } = this.state
-    this.state = dummyStore.map(() => <Main />)
+    this.state = dummyStore.map((item) => <Main product={item} />)
     return (this.state)
   }
 
